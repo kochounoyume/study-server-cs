@@ -1,0 +1,7 @@
+{
+  "name": "jp.kochounoyume.aspdemo.shared",
+  "version": "0.0.0",
+  "displayName": "ASPDemo Shared",
+  "description": "サーバーと共有しているコード群です",
+  "unity": "2022.3"
+}

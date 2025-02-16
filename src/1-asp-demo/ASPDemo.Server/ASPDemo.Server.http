@@ -1,0 +1,6 @@
+@ASPDemo.Server_HostAddress = http://localhost:5198
+
+GET {{ASPDemo.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

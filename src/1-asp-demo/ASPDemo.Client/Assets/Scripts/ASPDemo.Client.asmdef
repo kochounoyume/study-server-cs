@@ -1,0 +1,23 @@
+{
+    "name": "ASPDemo.Client",
+    "rootNamespace": "ASPDemo.Client",
+    "references": [
+        "GUID:d73966b1c2d06a040a4a2c4005e3ce58",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:2294a65d721f9974ca66d13b434e6b7b",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "MinimalUtility.Core.dll",
+        "System.Text.Json.dll",
+        "System.Text.Encodings.Web.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

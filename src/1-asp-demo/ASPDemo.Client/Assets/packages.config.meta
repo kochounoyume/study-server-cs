@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 18ec2fc00e98c9f47b11e84c969a5606
+labels:
+- NuGetForUnity
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 3
+  iconMap: {}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+    Any:
+      enabled: 0
+      settings: {}
+    Editor:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+    WindowsStoreApps:
+      enabled: 0
+      settings: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
