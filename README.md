@@ -4,6 +4,10 @@
 - [チュートリアル: ASP.NET Core で Web API を作成する](https://learn.microsoft.com/ja-jp/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0&tabs=visual-studio-code)
 - [.NETプロジェクトとUnityプロジェクトのソースコード共有最新手法](https://neue.cc/2024/01/15_shareprojectinunity.html)
 
+## 2-magiconion-demo
+### 参考資料
+- [Unity と .NET サーバーで始める](https://cysharp.github.io/MagicOnion/ja/quickstart-unity)
+
 ## License
 ### TextMesh Pro(TMP Essential Resources)
 Licensed under the Unity Companion License for Unity-dependent projects--see Unity Companion License.
