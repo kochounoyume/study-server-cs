@@ -198,6 +198,13 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "jp.kochounoyume.minimal.utility": {
+      "version": "https://github.com/kochounoyume/MinimalUtility.git?path=src/MinimalUtility.Unity/Packages/MinimalUtility",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f2d86a09dc2d613132c2a6b07c42759513a8ce37"
+    },
     "magiconiondemo.shared.unity": {
       "version": "file:../../MagicOnionDemo.Shared",
       "depth": 0,
