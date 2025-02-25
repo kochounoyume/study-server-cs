@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class MagicOnionInitializer
 {
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    public static void OnRuntimeInitialize()
-    {
-        // Initialize gRPC channel provider when the application is loaded.
-        GrpcChannelProviderHost.Initialize(new DefaultGrpcChannelProvider(() => new GrpcChannelOptions()
-        {
-            HttpHandler = new YetAnotherHttpHandler()
-            {
-                Http2Only = true,
-            },
-            DisposeHttpClient = true,
-        }));
-    }
+    // [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    // public static void OnRuntimeInitialize()
+    // {
+    //     // Initialize gRPC channel provider when the application is loaded.
+    //     GrpcChannelProviderHost.Initialize(new DefaultGrpcChannelProvider(() => new GrpcChannelOptions()
+    //     {
+    //         HttpHandler = new YetAnotherHttpHandler()
+    //         {
+    //             Http2Only = true,
+    //         },
+    //         DisposeHttpClient = true,
+    //     }));
+    // }
 }
