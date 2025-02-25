@@ -23,7 +23,7 @@ public sealed class ServerProcessManager : ScriptableSingleton<ServerProcessMana
         var startInfo = new ProcessStartInfo()
         {
             FileName = "dotnet",
-            Arguments = "run --urls \"http://localhost:5000\"",
+            Arguments = "run",
             WorkingDirectory = Path.Combine(Path.GetFullPath(Path.Combine(Application.dataPath, @"..\..\")), "MagicOnionDemo.Server"),
             RedirectStandardOutput = true,
             RedirectStandardError = true,
