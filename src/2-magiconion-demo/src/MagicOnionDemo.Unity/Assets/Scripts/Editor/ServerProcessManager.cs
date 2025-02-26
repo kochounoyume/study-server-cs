@@ -25,9 +25,7 @@ public sealed class ServerProcessManager : ScriptableSingleton<ServerProcessMana
             FileName = "dotnet",
             Arguments = "run",
             WorkingDirectory = Path.Combine(Path.GetFullPath(Path.Combine(Application.dataPath, @"..\..\")), "MagicOnionDemo.Server"),
-            RedirectStandardOutput = true,
-            RedirectStandardError = true,
-            UseShellExecute = false,
+            UseShellExecute = true,
         };
 
         try
