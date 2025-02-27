@@ -1,5 +1,6 @@
-using System;
+﻿using System;
 using Cysharp.Threading.Tasks;
+using Grpc.Core;
 using MagicOnion;
 using MagicOnion.Client;
 using MagicOnionDemo.Shared;
@@ -7,53 +8,51 @@ using UnityEngine;
 
 public class SampleScene : MonoBehaviour
 {
-#if UNITY_WEBGL && !UNITY_EDITOR
+//#if UNITY_WEBGL
     const string endpoint = "http://localhost:5000";
-#else
-    const string endpoint = "http://localhost:5001";
-#endif
+//#else
+    // const string endpoint = "http://localhost:5001";
+//#endif
+    
+    private readonly Lazy<ChannelBase> channel = new Lazy<ChannelBase>(() => GrpcChannelx.ForAddress(endpoint));
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async UniTaskVoid Start()
     {
-        var debugView = DebugView.instance;
-        var channel = GrpcChannelx.ForAddress(endpoint);
-  
+        WebUtils.Log("Start");
+        WebUtils.Log("ほげほげ");
+
+        await UniTask.NextFrame(destroyCancellationToken);
+        WebUtils.Log("1フレーム待機テスト");
+        
         try
         {
-            var client = MagicOnionClient.Create<IMyFirstService>(channel);
+            var client = MagicOnionClient.Create<IMyFirstService>(channel.Value);
 
+            // thread number debug
             var result = await client.SumAsync(100, 200);
-            debugView.message += @$"100 + 200 = {result}
-";
+            WebUtils.Log($"100 + 200 = {result}");
         }
         catch (Exception e)
         {
             Debug.LogException(e);
-            debugView.message += @$"Error: {e.Message}
-";
+            WebUtils.Log("API ERROR " + e.Message);
         }
-
+        
+        WebUtils.Log("ふがふが");
+        
         try
         {
             var receiver = new GreeterHubReceiver();
-            var hub = await StreamingHubClient.ConnectAsync<IGreeterHub, IGreeterHubReceiver>(channel, receiver);
+            var hub = await StreamingHubClient.ConnectAsync<IGreeterHub, IGreeterHubReceiver>(channel.Value, receiver);
             var result = await hub.HelloAsync("Alice");
-            debugView.message += @$"HelloAsync: {result}
-";
+            WebUtils.Log($"HelloAsync = {result}");
         }
         catch (Exception e)
         {
             Debug.LogException(e);
-            debugView.message += @$"Error: {e.Message}
-";
+            WebUtils.Log("STREAMING ERROR " + e.Message);
             throw;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

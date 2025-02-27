@@ -5,7 +5,6 @@ public class GreeterHubReceiver : IGreeterHubReceiver
 {
     void IGreeterHubReceiver.OnMessageReceived(string message)
     {
-        DebugView.instance.message += @$"{message}
-";
+        WebUtils.Log("GreeterHubReceiver.OnMessageReceived: " + message);
     }
 }

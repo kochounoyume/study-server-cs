@@ -7,6 +7,7 @@ public class GreeterHub : StreamingHubBase<IGreeterHub, IGreeterHubReceiver>, IG
 {
     public ValueTask<string> HelloAsync(string name)
     {
+        Console.WriteLine($"Hello {name}!");
         Task.Run(async () =>
         {
             await Task.Delay(1000);
